@@ -21,6 +21,7 @@ const Span = styled.span`
 `;
 
 const Days = ({ week }) => {
+  console.log(week);
   return (
     <Div>
       {week.map((w, i) => {

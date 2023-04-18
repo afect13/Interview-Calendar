@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { getCurrentWeek, getNextWeek, getPrevWeek, getEventTable, getValidateDate } from "./helpers/helpers";
 import GlobalStyles from "./styles/global";
-import Layout from "./Layout/Layout";
+import Layout from "./layout/Layout";
 import TopPanel from "./components/ControlPanel/TopPanel";
 import BotPanel from "./components/ControlPanel/BotPanel";
 import EventTable from "./components/EventTable";

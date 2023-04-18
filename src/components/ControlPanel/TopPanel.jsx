@@ -64,9 +64,7 @@ const TopPanel = ({ onAddEvent, week, onChangeWeek }) => {
     <DivPanel>
       <DivUpper>
         <H2>Interview Calendar</H2>
-        <Button onClick={() => onAddEvent()}>
-          <i class="fa-light fa-plus"></i>
-        </Button>
+        <Button onClick={() => onAddEvent()}>+</Button>
       </DivUpper>
       <DivLower>
         <Week />

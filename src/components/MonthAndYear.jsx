@@ -29,11 +29,11 @@ const MonthAndYear = ({ onChangeWeek, year }) => {
   return (
     <Div>
       <Button onClick={() => onChangeWeek("prev")}>
-        <i class="fa-solid fa-angle-left"></i>
+        <i className="fa-solid fa-angle-left"></i>
       </Button>
       <Span>{moment(`${year.split("/")[2]}-${year.split("/")[0]}-${year.split("/")[1]}`).format("MMMM YYYY")}</Span>
       <Button onClick={() => onChangeWeek("next")}>
-        <i class="fa-solid fa-angle-right"></i>
+        <i className="fa-solid fa-angle-right"></i>
       </Button>
     </Div>
   );
