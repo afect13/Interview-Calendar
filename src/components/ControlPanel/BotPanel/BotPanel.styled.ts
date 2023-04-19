@@ -1,5 +1,6 @@
 import styled from "styled-components";
-const Div = styled.div`
+
+export const Div = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -15,7 +16,7 @@ const Div = styled.div`
   border-bottom-width: 1px;
   border-color: #e4e4e7;
 `;
-const Button = styled.button`
+export const Button = styled.button`
   margin-right: 20px;
   margin-left: 20px;
   padding: 10px;
@@ -26,13 +27,3 @@ const Button = styled.button`
   font-size: 1.15rem;
   font-weight: 600;
 `;
-const BotPanel = ({ onChangeWeek, event, activeCell, onDelete }) => {
-  return (
-    <Div>
-      <Button onClick={() => onChangeWeek("today")}>Today</Button>
-      {event.includes(activeCell) && <Button onClick={() => onDelete()}>Delete</Button>}
-    </Div>
-  );
-};
-
-export default BotPanel;

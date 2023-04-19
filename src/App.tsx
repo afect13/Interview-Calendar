@@ -1,17 +1,17 @@
 import { useEffect, useState } from "react";
-import { getCurrentWeek, getNextWeek, getPrevWeek, getEventTable, getValidateDate } from "./helpers/helpers";
-import GlobalStyles from "./styles/global";
+import { getCurrentWeek, getEventTable, getNextWeek, getPrevWeek, getValidateDate } from "./helpers/helpers";
 import Layout from "./layout/Layout";
-import TopPanel from "./components/ControlPanel/TopPanel";
-import BotPanel from "./components/ControlPanel/BotPanel";
-import EventTable from "./components/EventTable";
+import GlobalStyles from "./styles/global";
+import TopPanel from "./components/ControlPanel/TopPanel/TopPanel";
+import BotPanel from "./components/ControlPanel/BotPanel/BotPanel";
+import EventTable from "./components/Table/EventTable/EventTable";
 const App = () => {
   const currentWeek = getCurrentWeek();
-  const [week, setWeek] = useState(currentWeek);
-  const [event, setEvent] = useState([]);
-  const [activeCell, setActiveCell] = useState("");
+  const [week, setWeek] = useState<string[]>(currentWeek);
+  const [event, setEvent] = useState<string[]>([]);
+  const [activeCell, setActiveCell] = useState<string | null>("");
   const initEventTable = getEventTable(week, event);
-  const handleChangeWeek = (button) => {
+  const handleChangeWeek = (button: string) => {
     if (button === "next") {
       setWeek(getNextWeek(week[6]));
     }
@@ -39,14 +39,14 @@ const App = () => {
       }
     }
   };
-  const handleChoseEvent = (id) => {
+  const handleChoseEvent = (id: null | string) => {
     setActiveCell(id);
   };
   const handleDeleteEvent = () => {
     setEvent(event.filter((e) => e !== activeCell));
   };
   useEffect(() => {
-    const prevLocalStorageData = JSON.parse(localStorage.getItem("Event"));
+    const prevLocalStorageData: any = JSON.parse(localStorage.getItem("Event") || "{}");
     if (prevLocalStorageData) setEvent(prevLocalStorageData);
   }, []);
   useEffect(() => {
