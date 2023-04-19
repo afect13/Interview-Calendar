@@ -1,15 +1,12 @@
 import styled from "styled-components";
-import Week from "../Week";
-import Days from "../Days";
-import MonthAndYear from "../MonthAndYear";
 
-const DivPanel = styled.div`
+export const DivPanel = styled.div`
   display: flex;
   flex-direction: column;
   height: 180px;
   width: 100%;
 `;
-const DivUpper = styled.div`
+export const DivUpper = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -20,7 +17,7 @@ const DivUpper = styled.div`
   height: 80px;
   background: #ffffff;
 `;
-const DivLower = styled.div`
+export const DivLower = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -38,7 +35,7 @@ const DivLower = styled.div`
   border-color: #e4e4e7;
 `;
 
-const H2 = styled.h2`
+export const H2 = styled.h2`
   margin: 0;
   font-size: 1.45rem;
   line-height: 1.75rem;
@@ -46,7 +43,7 @@ const H2 = styled.h2`
   margin-left: 25px;
 `;
 
-const Button = styled.button`
+export const Button = styled.button`
   margin-right: 20px;
   margin-bottom: 10px;
   padding: 10px;
@@ -58,21 +55,3 @@ const Button = styled.button`
   line-height: 1.75rem;
   font-weight: 300;
 `;
-
-const TopPanel = ({ onAddEvent, week, onChangeWeek }) => {
-  return (
-    <DivPanel>
-      <DivUpper>
-        <H2>Interview Calendar</H2>
-        <Button onClick={() => onAddEvent()}>+</Button>
-      </DivUpper>
-      <DivLower>
-        <Week />
-        <Days week={week} />
-        <MonthAndYear year={week[0]} onChangeWeek={onChangeWeek} />
-      </DivLower>
-    </DivPanel>
-  );
-};
-
-export default TopPanel;
