@@ -46,7 +46,7 @@ const App = () => {
     setEvent(event.filter((e) => e !== activeCell));
   };
   useEffect(() => {
-    const prevLocalStorageData: any = JSON.parse(localStorage.getItem("Event") || "{}");
+    const prevLocalStorageData: string[] = JSON.parse(localStorage.getItem("Event") || "[]");
     if (prevLocalStorageData) setEvent(prevLocalStorageData);
   }, []);
   useEffect(() => {
