@@ -6,7 +6,7 @@ const EventTable = ({ table, onChoseEvent, activeCell }: EventTableProps) => {
   return (
     <Wrapper>
       <Table>
-        {table.flat().map((a, i) => {
+        {table.flat().map((a: string | boolean, i: number) => {
           if (!a) {
             return <Cell onClick={() => onChoseEvent(null)} key={i}></Cell>;
           }
