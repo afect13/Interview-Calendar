@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/Interview-Calendar/static/js/main.ae4ff0ab.js",
+    "main.js": "/Interview-Calendar/static/js/main.dd430628.js",
     "index.html": "/Interview-Calendar/index.html",
-    "main.ae4ff0ab.js.map": "/Interview-Calendar/static/js/main.ae4ff0ab.js.map"
+    "main.dd430628.js.map": "/Interview-Calendar/static/js/main.dd430628.js.map"
   },
   "entrypoints": [
-    "static/js/main.ae4ff0ab.js"
+    "static/js/main.dd430628.js"
   ]
 }
